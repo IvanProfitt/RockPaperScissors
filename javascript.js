@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   const randomNumber = Math.random();
 
@@ -21,29 +24,58 @@ function getPlayerChoice(value) {
   return 'scissors';
 }
 
-playRound(getPlayerChoice(1), getComputerChoice());
+const test = document.querySelector('.results');
+const pS = document.querySelector('.you-Score');
+const bS = document.querySelector('.bot-Score');
 
-playRound(getPlayerChoice(2), getComputerChoice());
+function displayResults(information) {
+  test.innerHTML = information;
+}
 
-playRound(getPlayerChoice(3), getComputerChoice());
+function updateScore(num) {
+  if (num === 0) {
+    playerScore += 1;
+    bS.innerHTML = computerScore.toString();
+  } else {
+    computerScore += 1;
+    pS.innerHTML = playerScore.toString();
+  }
+}
 
 function playRound(playerSelection, computerSelection) {
-  const test = document.querySelector('.print');
   if (
     (playerSelection === 'rock' && computerSelection === 'scissors')
     || (playerSelection === 'paper' && computerSelection === 'rock')
     || (playerSelection === 'scissors' && computerSelection === 'paper')
   ) {
-    test.innerHTML = ` You Won! ${playerSelection} beats the bot's choice, ${computerSelection}`;
+    updateScore(1);
+    displayResults(` You Won! ${playerSelection} beats the bot's choice, ${computerSelection}`);
   } else if (playerSelection === computerSelection) {
-    test.innerHTML = "It's a tie!";
+    displayResults("It's a tie!");
   } else {
-    test.innerHTML = `You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`;
+    updateScore(0);
+    displayResults(`You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`);
   }
 }
 
-function game() {
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const info = button.id;
+    playRound(info, getComputerChoice());
+
+    if (playerScore === 5 || computerScore === 5) {
+      makeWinner();
+    }
+  });
+});
+
+// playing.onclick(playRound((getPlayerChoice(playing)), getComputerChoice()));
+// playing.onclick(console.log('it works'));
+
+/* function game() {
   for (let x = 0; x <= 5; x += 1) {
     playRound();
   }
-}
+} */

@@ -53,18 +53,20 @@ form, input{
 	margin:20px;
 
 }
-.but{
+.button{
 	width:100px;
 	height:100px;
+	background-size: cover;
+	background-position: center;
 }
-.but:hover{
+.button:hover{
 	color: #494949 !important;
 	border-radius: 10px;
 	border-color: #494949 !important;
 	transition: all 0.3s ease 0s;
 
 }
-.title,.print,.result{
+.title,.print,.result, .results{
 	text-align: center;
 
 }
@@ -74,12 +76,12 @@ body{
 }
 
 h1{
-	font-size: 60px;
+	font-size: 50px;
 }
 
 .heading{
 	background-color: aquamarine;
-	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .input{
@@ -90,6 +92,22 @@ h1{
 
 	
 }
+
+
+.Caption, .Scores, .Label{
+	display:flex;
+	justify-content: center;
+	margin-top:20px;
+	padding: 0px 40px;
+	font-size:40px;
+}
+
+#Score {
+	font-size: 80px;
+	padding: 0px 48px;
+  }
+
+
 .personalInfo{
 	display:flex;
 	background-color: orange;
@@ -97,23 +115,16 @@ h1{
 	bottom:0px;
 	left: 0px;
 	width:100%;
-	height:100px;
 	align-items: center;
 	justify-content: center;
 
 }
-
-.but{
-	background-size: cover;
-	background-position: center;
-}
-
-.Rock{
+#rock{
 	background-image: url("images/download.jpg");
 }
-.Paper{
+#paper{
 	background-image: url("images/old-paper-background-free-png.png");
 }
-.Scissors{
+#scissors{
 	background-image: url("images/31ZTYcg02mS._AC_.jpg");
 }
