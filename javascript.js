@@ -18,28 +18,32 @@ function getPlayerChoice(value) {
   if (value === 2) {
     return 'paper';
   }
-
   return 'scissors';
 }
 
+playRound(getPlayerChoice(1), getComputerChoice());
+
+playRound(getPlayerChoice(2), getComputerChoice());
+
+playRound(getPlayerChoice(3), getComputerChoice());
+
 function playRound(playerSelection, computerSelection) {
+  const test = document.querySelector('.print');
   if (
     (playerSelection === 'rock' && computerSelection === 'scissors')
     || (playerSelection === 'paper' && computerSelection === 'rock')
     || (playerSelection === 'scissors' && computerSelection === 'paper')
   ) {
-    return ` You Won! ${playerSelection} beats the bot's choice, ${computerSelection}`;
+    test.innerHTML = ` You Won! ${playerSelection} beats the bot's choice, ${computerSelection}`;
+  } else if (playerSelection === computerSelection) {
+    test.innerHTML = "It's a tie!";
+  } else {
+    test.innerHTML = `You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`;
   }
-
-  if (playerSelection === computerSelection) {
-    return "It's a tie!";
-  }
-
-  return `You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`;
 }
 
-function testing() {
-  const test = document.querySelector('.test');
-  test.value = 'It Worked!';
-  console.log('1');
+function game() {
+  for (let x = 0; x <= 5; x += 1) {
+    playRound();
+  }
 }

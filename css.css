@@ -50,15 +50,70 @@ form, input{
 	display: flex;
 	justify-content: center;
 	gap:20px;
+	margin:20px;
+
 }
-.Rock{
+.but{
 	width:100px;
 	height:100px;
 }
-.Rock:hover{
+.but:hover{
 	color: #494949 !important;
-border-radius: 50px;
-border-color: #494949 !important;
-transition: all 0.3s ease 0s;
+	border-radius: 10px;
+	border-color: #494949 !important;
+	transition: all 0.3s ease 0s;
+
+}
+.title,.print,.result{
+	text-align: center;
+
 }
 
+body{
+	background-color: #FFFFF0;
+}
+
+h1{
+	font-size: 60px;
+}
+
+.heading{
+	background-color: aquamarine;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.input{
+	background-color: darkblue;
+}
+
+.info{background-color: green;
+
+	
+}
+.personalInfo{
+	display:flex;
+	background-color: orange;
+	position: absolute;
+	bottom:0px;
+	left: 0px;
+	width:100%;
+	height:100px;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.but{
+	background-size: cover;
+	background-position: center;
+}
+
+.Rock{
+	background-image: url("images/download.jpg");
+}
+.Paper{
+	background-image: url("images/old-paper-background-free-png.png");
+}
+.Scissors{
+	background-image: url("images/31ZTYcg02mS._AC_.jpg");
+}
