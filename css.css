@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -63,8 +64,7 @@ form, input{
 	color: #494949 !important;
 	border-radius: 10px;
 	border-color: #494949 !important;
-	transition: all 0.3s ease 0s;
-
+	
 }
 .title,.print,.result, .results{
 	text-align: center;
@@ -77,18 +77,21 @@ body{
 
 h1{
 	font-size: 50px;
+	color: #FCFCFC;
 }
 
 .heading{
-	background-color: aquamarine;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+	background-color: #3F4045;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
-.input{
-	background-color: darkblue;
+.result,.results{
+	color:black;
 }
 
-.info{background-color: green;
+.info{;
 
 	
 }
@@ -110,7 +113,7 @@ h1{
 
 .personalInfo{
 	display:flex;
-	background-color: orange;
+	background-color: #333;
 	position: absolute;
 	bottom:0px;
 	left: 0px;
@@ -119,12 +122,20 @@ h1{
 	justify-content: center;
 
 }
+
+.gitHub{
+	height:40px;
+	width: 40px;
+	margin-left:20px;;
+	margin:10px;
+	
+}
 #rock{
-	background-image: url("images/download.jpg");
+	background-image: url("images/istockphoto-1348256634-612x612\ \(1\).jpg");
 }
 #paper{
-	background-image: url("images/old-paper-background-free-png.png");
+	background-image: url("images/istockphoto-1348256634-612x612\ \(2\).jpg");
 }
 #scissors{
-	background-image: url("images/31ZTYcg02mS._AC_.jpg");
+	background-image: url("images/istockphoto-1348256634-612x612\ \(3\).jpg");
 }

@@ -34,10 +34,8 @@ function displayResults(information) {
 
 function updateScore(num) {
   if (num === 0) {
-    playerScore += 1;
     bS.innerHTML = computerScore.toString();
   } else {
-    computerScore += 1;
     pS.innerHTML = playerScore.toString();
   }
 }
@@ -48,14 +46,23 @@ function playRound(playerSelection, computerSelection) {
     || (playerSelection === 'paper' && computerSelection === 'rock')
     || (playerSelection === 'scissors' && computerSelection === 'paper')
   ) {
+    playerScore += 1;
     updateScore(1);
     displayResults(` You Won! ${playerSelection} beats the bot's choice, ${computerSelection}`);
   } else if (playerSelection === computerSelection) {
     displayResults("It's a tie!");
   } else {
+    computerScore += 1;
     updateScore(0);
     displayResults(`You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`);
   }
+}
+
+function makeWinner() {
+  computerScore = 0;
+  playerScore = 0;
+  bS.innerHTML = computerScore.toString();
+  pS.innerHTML = computerScore.toString();
 }
 
 const buttons = document.querySelectorAll('button');
@@ -70,12 +77,3 @@ buttons.forEach((button) => {
     }
   });
 });
-
-// playing.onclick(playRound((getPlayerChoice(playing)), getComputerChoice()));
-// playing.onclick(console.log('it works'));
-
-/* function game() {
-  for (let x = 0; x <= 5; x += 1) {
-    playRound();
-  }
-} */
