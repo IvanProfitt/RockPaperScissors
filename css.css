@@ -66,7 +66,7 @@ form, input{
 	border-color: #494949 !important;
 	
 }
-.title,.print,.result, .results{
+.title,.print,.result, .results,.final{
 	text-align: center;
 
 }
@@ -87,7 +87,7 @@ h1{
 	border-bottom-right-radius: 10px;
 }
 
-.result,.results{
+.result,.results,.final{
 	color:black;
 }
 

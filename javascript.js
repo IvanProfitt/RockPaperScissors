@@ -33,6 +33,10 @@ function displayResults(information) {
 }
 
 function updateScore(num) {
+  if (computerScore === 5 || playerScore === 5) {
+    makeWinner();
+    console.log(1);
+  }
   if (num === 0) {
     bS.innerHTML = computerScore.toString();
   } else {
@@ -63,6 +67,14 @@ function makeWinner() {
   playerScore = 0;
   bS.innerHTML = computerScore.toString();
   pS.innerHTML = computerScore.toString();
+  const final = document.querySelector('.final');
+  if (playerScore === 5) {
+    final.innerHTML("You've defeated the super advanced AI! Maybe humanity will be fine after all.");
+  }
+
+  if (computerScore === 5) {
+    final.innerHTML('Our proprietary AI has become too strong. It has beaten you.');
+  }
 }
 
 const buttons = document.querySelectorAll('button');
