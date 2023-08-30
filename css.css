@@ -22,34 +22,21 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body {
 	line-height: 1;
+	background-image: url("images/dot-grid.webp");
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+form,input,.Caption,.Scores,.Label,.personalInfo,.endResults{
+	display:flex;
+	justify-content: center;
+	color:black;
+	text-align: center;;
+
 }
 form, input{
-	display: flex;
-	justify-content: center;
 	gap:20px;
 	margin:20px;
 
@@ -88,18 +75,11 @@ h1{
 }
 
 .result,.results,.final{
-	color:black;
-}
-
-.info{;
-
-	
+		color:black;
 }
 
 
 .Caption, .Scores, .Label{
-	display:flex;
-	justify-content: center;
 	margin-top:20px;
 	padding: 0px 40px;
 	font-size:40px;
@@ -112,14 +92,13 @@ h1{
 
 
 .personalInfo{
-	display:flex;
 	background-color: #333;
+
 	position: absolute;
 	bottom:0px;
 	left: 0px;
 	width:100%;
 	align-items: center;
-	justify-content: center;
 
 }
 
@@ -129,6 +108,9 @@ h1{
 	margin-left:20px;;
 	margin:10px;
 	
+}
+.name{
+	color:grey;
 }
 #rock{
 	background-image: url("images/istockphoto-1348256634-612x612\ \(1\).jpg");

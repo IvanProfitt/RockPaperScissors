@@ -1,5 +1,9 @@
 let playerScore = 0;
 let computerScore = 0;
+const test = document.querySelector('.results');
+const pS = document.querySelector('.you-Score');
+const bS = document.querySelector('.bot-Score');
+const buttons = document.querySelectorAll('button');
 
 function getComputerChoice() {
   const randomNumber = Math.random();
@@ -14,22 +18,23 @@ function getComputerChoice() {
   return 'scissors';
 }
 
-function getPlayerChoice(value) {
-  if (value === 1) {
-    return 'rock';
-  }
-  if (value === 2) {
-    return 'paper';
-  }
-  return 'scissors';
-}
-
-const test = document.querySelector('.results');
-const pS = document.querySelector('.you-Score');
-const bS = document.querySelector('.bot-Score');
-
 function displayResults(information) {
   test.innerHTML = information;
+}
+
+function makeWinner() {
+  console.log('2');
+  const endResults = document.querySelector('.endResults');
+  if (playerScore === 5) {
+    endResults.innerHTML = "You've defeated the super advanced AI! Humanity is saved!.";
+  } else {
+    endResults.innerHTML = 'Our proprietary AI has become too strong. It has beaten you.';
+  }
+
+  computerScore = 0;
+  playerScore = 0;
+  bS.innerHTML = computerScore.toString();
+  pS.innerHTML = computerScore.toString();
 }
 
 function updateScore(num) {
@@ -61,23 +66,6 @@ function playRound(playerSelection, computerSelection) {
     displayResults(`You lose. You chose ${playerSelection}, but the bot chose ${computerSelection}`);
   }
 }
-
-function makeWinner() {
-  computerScore = 0;
-  playerScore = 0;
-  bS.innerHTML = computerScore.toString();
-  pS.innerHTML = computerScore.toString();
-  const final = document.querySelector('.final');
-  if (playerScore === 5) {
-    final.innerHTML("You've defeated the super advanced AI! Maybe humanity will be fine after all.");
-  }
-
-  if (computerScore === 5) {
-    final.innerHTML('Our proprietary AI has become too strong. It has beaten you.');
-  }
-}
-
-const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
