@@ -5,7 +5,7 @@ Made for the Odin Project.
 
 
 What I learned:
-*DOM Manipulation.
-*ESlint usage.
-*JavaScript Syntax.
++*DOM Manipulation.
++*ESlint usage.
++*JavaScript Syntax.
 
